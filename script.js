@@ -86,7 +86,6 @@ window.onload = function() {
             case 80:
                 pow();
                 break;
-            case 79:
                 
         };
     });
