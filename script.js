@@ -66,6 +66,14 @@ window.onload = function() {
                 results.blur();
                 results.value += '/'
                 break;
+            case 77:
+                results.blur();
+                results.value += '*';
+                break;
+            case 79:
+                results.blur();
+                results.value += '%';
+                break;
             case 8:
                 results.focus();
                 if( results.value.length === 0) {
@@ -116,7 +124,7 @@ window.onload = function() {
     };
 
     function equal(){
-        if ( eval(results.value) === undefined ) {
+        if ( eval(results.value) == undefined ) {
             results.value = '';
         }
         else if ( isNaN( eval( results.value ) ) ){
