@@ -5,7 +5,6 @@ A simple calculator that I created to teach native JavaScript
 ## To run
 
 You will need to have [git](https://git-scm.com/) to clone a repository to your system.
---------------------------------------------------------------------
 `https://github.com/fraim/calculator.git`
 To start the calculator, open index.html and it is at your service
 
