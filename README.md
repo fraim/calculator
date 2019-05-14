@@ -2,7 +2,7 @@
 
 A simple calculator that I created to teach native JavaScript
 
-## To run
+# To run
 
 You will need to have [git](https://git-scm.com/) to clone a repository to your system.
 ----------------------------------------------------------------------------------------
