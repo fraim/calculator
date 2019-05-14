@@ -14,8 +14,8 @@ To start the calculator, open index.html and it is at your service
 * Backspace - Erase each item
 * Enter - The output
 * Numbers - You can use numbers in the keyboard
-* + - Button on the keyboard for summation
-* - - Button on the keyboard for the difference 
+* (+) - Button on the keyboard for summation
+* (-) - Button on the keyboard for the difference 
 * / - Button on the keyboard to divide
 * . - Button on the keyboard for fractional numbers
 * s - Button on the keyboard for the square root
