@@ -16,11 +16,11 @@ To start the calculator, open index.html and it is at your service
 * Numbers - You can use numbers in the keyboard
 * (+) - Button on the keyboard for summation
 * (-) - Button on the keyboard for the difference 
-* / - Button on the keyboard to divide
-* . - Button on the keyboard for fractional numbers
-* s - Button on the keyboard for the square root
-* f - Button on the keyboard for factorial
-* p - Button on the keyboard for squaring
-* с - Button on the keyboard for clearing
-* m - Button on the keyboard for multiple
-* o - Button on the keyboard for the remainder of the division
+* (/)- Button on the keyboard to divide
+* (.) - Button on the keyboard for fractional numbers
+* (s) - Button on the keyboard for the square root
+* (f) - Button on the keyboard for factorial
+* (p) - Button on the keyboard for squaring
+* (с) - Button on the keyboard for clearing
+* (m) - Button on the keyboard for multiple
+* (o) - Button on the keyboard for the remainder of the division
