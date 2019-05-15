@@ -72,7 +72,7 @@ window.onload = function() {
                 break;
             case 79:
                 results.blur();
-                results.value += '%';
+                results.value =  percent( eval( results.value ) );
                 break;
             case 8:
                 results.focus();
@@ -99,24 +99,27 @@ window.onload = function() {
     });
 
     function calc(e) {
-        if ( e.target.innerText === '=' ){
+        if ( e.target.innerText === '=' ) {
             equal();
         }
-        else if ( e.target.innerText === 'C' ){
+        else if ( e.target.innerText === 'C' ) {
             results.blur();
             clear();
         }
-        else if( e.target.innerText === 'x' ){
+        else if( e.target.innerText === 'x' ) {
             results.value += '*';
         }
-        else if ( e.target.innerText === '√'){
+        else if ( e.target.innerText === '√') {
             sqrt();
         }
         else if ( e.target.innerText === document.querySelector('#x2').innerText) {
             pow();
         }
-        else if ( e.target.innerText === 'x!' ){
+        else if ( e.target.innerText === 'x!' ) {
             results.value = factorial( eval( results.value ) );
+        }
+        else if ( e.target.innerText === '%' ){
+            results.value =  percent( eval( results.value ) );
         }
         else {
             results.value += e.target.innerText;
@@ -124,16 +127,21 @@ window.onload = function() {
     };
 
     function equal(){
-        if ( eval(results.value) == undefined ) {
-            results.value = '';
+        try {
+            if ( eval( results.value ) == undefined ) {
+                results.value = '';
+            }
+            else if ( isNaN( eval( results.value ) ) ) {
+                results.value = 'Error(click to c)';
+                results.blur();
+            }
+            else {
+                results.blur();
+                results.value = eval( results.value );
+            }
         }
-        else if ( isNaN( eval( results.value ) ) ){
-            results.value = 'Error(click to c)';
-            results.blur();
-        }
-        else {
-            results.blur();
-            results.value = eval( results.value );
+        catch (ex) {
+            results.value = new Error('incorrect data');
         }
     };
 
@@ -146,7 +154,10 @@ window.onload = function() {
     function pow() {
         results.value = Math.pow( eval( results.value ), 2 );
     };
-    function factorial(n) {
+    function factorial( n ) {
         return n ? n * factorial(n - 1) : 1;
     };
+    function percent( n ) {
+        return n / 100;
+    }
 }
